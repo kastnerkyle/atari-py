@@ -3,10 +3,12 @@ project(ale)
 set(ALEVERSION "0.5")
 
 
-option(USE_SDL "Use SDL" OFF)
+#option(USE_SDL "Use SDL" OFF)
+option(USE_SDL "Use SDL" ON)
 option(USE_RLGLUE "Use RL-Glue" OFF)
 option(BUILD_EXAMPLES "Build Example Agents" OFF)
-option(BUILD_CPP_LIB "Build C++ Shared Library" OFF)
+#option(BUILD_CPP_LIB "Build C++ Shared Library" OFF)
+option(BUILD_CPP_LIB "Build C++ Shared Library" ON)
 option(BUILD_CLI "Build ALE Command Line Interface" OFF)
 option(BUILD_C_LIB "Build ALE C Library (needed for Python interface)" ON)
 

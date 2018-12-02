@@ -6,7 +6,7 @@
 # ALE provided in doc/examples/sharedLibraryInterfaceExample.cpp
 import sys
 from random import randrange
-from ale_python_interface import ALEInterface
+from atari_py.ale_python_interface import ALEInterface
 
 if len(sys.argv) < 2:
   print 'Usage:', sys.argv[0], 'rom_file'
@@ -43,6 +43,7 @@ for episode in xrange(10):
     a = legal_actions[randrange(len(legal_actions))]
     # Apply an action and get the resulting reward
     reward = ale.act(a);
+    from IPython import embed; embed(); raise ValueError()
     total_reward += reward
   print 'Episode', episode, 'ended with score:', total_reward
   ale.reset_game()
